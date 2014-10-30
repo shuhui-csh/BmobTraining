@@ -21,13 +21,70 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int add_friends=0x7f020000;
+        public static final int address_list=0x7f020001;
+        public static final int back=0x7f020002;
+        public static final int button_start_click=0x7f020003;
+        public static final int button_start_default=0x7f020004;
+        public static final int guide1=0x7f020005;
+        public static final int guide2=0x7f020006;
+        public static final int guide3=0x7f020007;
+        public static final int guide4=0x7f020008;
+        public static final int head=0x7f020009;
+        public static final int ic_launcher=0x7f02000a;
+        public static final int login_bt_bg=0x7f02000b;
+        public static final int menu_background=0x7f02000c;
+        public static final int point=0x7f02000d;
+        public static final int point_normal=0x7f02000e;
+        public static final int point_select=0x7f02000f;
+        public static final int selector_button_start=0x7f020010;
+        public static final int settings=0x7f020011;
+        public static final int shadow=0x7f020012;
+        public static final int star=0x7f020013;
+        public static final int titlebar_left_menu=0x7f020014;
+        public static final int wechat=0x7f020015;
+        public static final int white_bg=0x7f020016;
     }
     public static final class id {
-        public static final int action_settings=0x7f080000;
+        public static final int action_settings=0x7f080019;
+        public static final int add_friends=0x7f080002;
+        public static final int bt_back=0x7f08000e;
+        public static final int bt_forget=0x7f08000c;
+        public static final int bt_login=0x7f08000b;
+        public static final int bt_register=0x7f08000d;
+        public static final int chat_list=0x7f080018;
+        public static final int et_account=0x7f080009;
+        public static final int et_getEmailAd=0x7f08000f;
+        public static final int et_getpassword=0x7f080010;
+        public static final int et_password=0x7f08000a;
+        public static final int home_fragment=0x7f080003;
+        public static final int iv_background=0x7f080011;
+        public static final int iv_icon=0x7f080017;
+        public static final int iv_shadow=0x7f080012;
+        public static final int layout_left_menu=0x7f080014;
+        public static final int layout_right_menu=0x7f080016;
+        public static final int ll=0x7f080006;
+        public static final int start_bt=0x7f080005;
+        public static final int sv_left_menu=0x7f080013;
+        public static final int sv_right_menu=0x7f080015;
+        public static final int title_bar_left_menu=0x7f080000;
+        public static final int tv1_base_adapter=0x7f080007;
+        public static final int tv2_base_adapter=0x7f080008;
+        public static final int tv_title=0x7f080001;
+        public static final int viewpager=0x7f080004;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
+        public static final int address_list_fragment=0x7f030001;
+        public static final int enter_page=0x7f030002;
+        public static final int guide=0x7f030003;
+        public static final int listview_adapter_item=0x7f030004;
+        public static final int login=0x7f030005;
+        public static final int register=0x7f030006;
+        public static final int residemenu=0x7f030007;
+        public static final int residemenu_item=0x7f030008;
+        public static final int setting_fragment=0x7f030009;
+        public static final int wechat_fragment=0x7f03000a;
     }
     public static final class menu {
         public static final int main=0x7f070000;
