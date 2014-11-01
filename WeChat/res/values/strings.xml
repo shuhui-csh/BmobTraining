@@ -5,4 +5,10 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
 
+     <string name="add_avator">头像</string>
+    <string name="add_nick">昵称</string>
+    <string name="add_name">账号</string>
+    <string name="add_name_hint">请输入昵称&#8230;</string>
+    <string name="add_gender">性别</string>
+    
 </resources>
