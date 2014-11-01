@@ -3,7 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
+
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+
     <ListView
         android:id="@+id/chat_list"
         android:layout_width="match_parent"
@@ -11,6 +15,5 @@
         android:divider="#08f"
         android:dividerHeight="2px"
         android:headerDividersEnabled="true" />
-    
 
 </LinearLayout>
