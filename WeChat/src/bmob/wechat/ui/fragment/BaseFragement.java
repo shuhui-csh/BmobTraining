@@ -1,6 +1,7 @@
 package bmob.wechat.ui.fragment;
 
 import bmob.wechat.init.CustomApplication;
+
 import bmob.wechat.ui.view.HeaderLayout;
 import bmob.wechat.ui.view.HeaderLayout.HeaderStyle;
 import bmob.wechat.ui.view.HeaderLayout.onLeftImageButtonClickListener;
@@ -9,10 +10,10 @@ import cn.bmob.im.BmobChatManager;
 import cn.bmob.im.BmobUserManager;
 import cn.bmob.im.util.BmobLog;
 import com.wechat.R;
-import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Toast;

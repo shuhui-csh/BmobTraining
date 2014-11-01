@@ -1,6 +1,7 @@
 package bmob.wechat.ui;
 
 import bmob.wechat.residememu.ResideMenu;
+
 import bmob.wechat.residememu.ResideMenuItem;
 import bmob.wechat.ui.fragment.AddressListFragment;
 import bmob.wechat.ui.fragment.SettingsFragment;
