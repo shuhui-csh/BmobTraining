@@ -9,7 +9,6 @@ import cn.bmob.im.BmobChatManager;
 import cn.bmob.im.BmobUserManager;
 import cn.bmob.im.util.BmobLog;
 import com.wechat.R;
-
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
