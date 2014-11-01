@@ -43,12 +43,12 @@ public class MainActivity extends FragmentActivity implements
 		super.onCreate(savedInstanceState);
 		// 初始化 Bmob SDK
 		// 使用时请将第二个参数Application ID替换成你在Bmob服务器端创建的Application ID
-		Bmob.initialize(this, "07d37b2990352a3e36c7dc2c50f60694");
+		//Bmob.initialize(this, "463e9b381a27dd43f2667f6b98d0aa11");
 		// 隐藏标题栏
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_main);
 		setUpMenu();
-		changeFragment(new WechatFragment());
+		//changeFragment(new WechatFragment());
 	}
 
 	private void setUpMenu() {

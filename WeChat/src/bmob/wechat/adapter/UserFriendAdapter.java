@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.SectionIndexer;
 import android.widget.TextView;
 import bmob.wechat.bean.User;
+import bmob.wechat.demo.CustomApplcation;
 import bmob.wechat.utils.ImageLoadOptions;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -25,9 +26,7 @@ import com.wechat.R;
   * @date 2014-6-12 下午3:03:40
   */
 @SuppressLint("DefaultLocale")
-public class UserFriendAdapter extends BaseAdapter  implements SectionIndexer {
-	
-	
+public class UserFriendAdapter extends BaseAdapter implements SectionIndexer {
 	private Context ct;
 	private List<User> data;
 
@@ -36,17 +35,8 @@ public class UserFriendAdapter extends BaseAdapter  implements SectionIndexer {
 		this.data = datas;
 	}
 
-	/** 当ListView数据发生变化时,调用此方法来更新ListView
-	  * @Title: updateListView
-	  * @Description: TODO
-	  * @param @param list 
-	  * @return void
-	  * @throws
-	  */
 	public void updateListView(List<User> list) {
 		this.data = list;
-		// notifyDataSetChanged()可以在修改适配器绑定的数组后，
-		//不用重新刷新Activity，通知Activity更新ListView。
 		notifyDataSetChanged();
 	}
 
@@ -74,8 +64,7 @@ public class UserFriendAdapter extends BaseAdapter  implements SectionIndexer {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder viewHolder = null;
 		if (convertView == null) {
-			convertView = LayoutInflater.from(ct).inflate(
-					R.layout.item_user_friend, null);
+			convertView = LayoutInflater.from(ct).inflate(R.layout.item_user_friend, null);
 			viewHolder = new ViewHolder();
 			viewHolder.alpha = (TextView) convertView.findViewById(R.id.alpha);
 			viewHolder.name = (TextView) convertView
@@ -92,6 +81,9 @@ public class UserFriendAdapter extends BaseAdapter  implements SectionIndexer {
 		final String avatar = friend.getAvatar();
 
 		if (!TextUtils.isEmpty(avatar)) {
+			//注意在使用之前要先初始化
+			CustomApplcation customApplcation = new CustomApplcation();
+			customApplcation.initImageLoader(ct);
 			ImageLoader.getInstance().displayImage(avatar, viewHolder.avatar, ImageLoadOptions.getOptions());
 		} else {
 			viewHolder.avatar.setImageDrawable(ct.getResources().getDrawable(R.drawable.head));
@@ -99,16 +91,14 @@ public class UserFriendAdapter extends BaseAdapter  implements SectionIndexer {
 		viewHolder.name.setText(name);
 
 		// 根据position获取分类的首字母的Char ascii值
-		//getSectionForPosition（）通过该项的位置，获得所在分类组的索引号
-		//getPositionForSection()根据分类列的索引号获得该序列的首个位置
-		int section = getSectionForPosition(position);
+//		int section = getSectionForPosition(position);
 		// 如果当前位置等于该分类首字母的Char的位置 ，则认为是第一次出现
-		if (position == getPositionForSection(section)) {
-			viewHolder.alpha.setVisibility(View.VISIBLE);//显示分类
-			viewHolder.alpha.setText(friend.getSortLetters());
-		} else {
-			viewHolder.alpha.setVisibility(View.GONE);
-		}
+//		if (position == getPositionForSection(section)) {
+//			viewHolder.alpha.setVisibility(View.VISIBLE);
+//			viewHolder.alpha.setText(friend.getSortLetters());
+//		} else {
+//			viewHolder.alpha.setVisibility(View.GONE);
+//		}
 
 		return convertView;
 	}
@@ -141,6 +131,7 @@ public class UserFriendAdapter extends BaseAdapter  implements SectionIndexer {
 
 		return -1;
 	}
+
 	@Override
 	public Object[] getSections() {
 		return null;
