@@ -38,6 +38,8 @@
         <activity
             android:name="bmob.wechat.ui.MainActivity"
             android:launchMode="standard" />
+        <activity android:name="bmob.wechat.ui.SetMyInfoActivity"></activity>
+        <activity android:name="bmob.wechat.ui.UpdateNickActivity"></activity>
     </application>
 
 </manifest>

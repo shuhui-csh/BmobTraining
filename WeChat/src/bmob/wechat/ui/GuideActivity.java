@@ -109,6 +109,8 @@ public class GuideActivity extends Activity implements OnClickListener,
 		for (int i = 0; i < pics.length; i++) {
 			// 得到一个LinearLayout下面的每一个子元素
 			points[i] = (ImageView) linearLayout.getChildAt(i);
+			points[i].setVisibility(0);
+			points[i].setClickable(true);
 			// 默认都设为灰色
 			points[i].setEnabled(true);
 			// 给每个小点设置监听
@@ -146,7 +148,7 @@ public class GuideActivity extends Activity implements OnClickListener,
 
 	@Override
 	public void onPageSelected(int position) { // position从0开始
-		if (position == 1) {
+		if (position == pics.length-1) {
 			// 最后1个页面时，显示 启动按钮，设置其为可点击
 			final Intent intentToLogin = new Intent(GuideActivity.this,
 					LoginActivity.class);

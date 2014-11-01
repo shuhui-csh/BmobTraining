@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/wood" >
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#ce000000" >
+
+        <Button
+            android:id="@+id/title_bar_left_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/titlebar_menu_selector" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="7dp"
+            android:textColor="@android:color/white"
+            android:text="修改昵称"
+            android:textSize="19sp" />
+
+        <Button
+            android:id="@+id/title_bar_right_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="5dp" 
+           	android:text="ok"
+           	android:textColor="@android:color/white"
+           	android:background="#00000000"
+			/>
+
+    </FrameLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp" >
+    </View>
+    <RelativeLayout
+        android:id="@+id/rl_info_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/item"
+        android:orientation="horizontal"
+        android:padding="10dip" >
+
+        <!-- 垂直方向上居中：centerVertical -->
+		
+        <TextView
+            android:id="@+id/nick_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="昵称  ："
+            android:textColor="@android:color/white"
+            android:textSize="19sp" />
+		<!-- 显示昵称的编辑框在箭头的左边，并与标识的文本框底端对齐 -->
+		<!-- 由于此时箭头仍未定义，所以用@+id,但写“呢称”的文本已在前面定义，就用@id -->
+        <bmob.wechat.view.LineEditText
+            android:id="@+id/edit_nick"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/nick_lable"
+            android:layout_toRightOf="@id/nick_lable"
+            android:layout_alignBaseline="@id/nick_lable"
+            android:background="@color/transparent"
+			android:gravity="center_vertical"
+            android:textCursorDrawable="@null"
+            android:hint="请输入昵称...."
+            android:textColor="@android:color/white"
+            android:textSize="19sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

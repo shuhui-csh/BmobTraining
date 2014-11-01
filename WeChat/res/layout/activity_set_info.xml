@@ -1,0 +1,235 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_myInfo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/towel">
+
+    <!-- 顶部布局 -->
+
+    <FrameLayout
+        android:id="@+id/back_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#08f" >
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/back_arrow" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="7dp"
+            android:text="个人资料"
+            android:textColor="@android:color/white"
+            android:textSize="19sp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/base_horizontal_line" >
+    </View>
+
+    <RelativeLayout
+        android:id="@+id/rl_info_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/item"
+        android:minHeight="100dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <!-- 垂直方向上居中：centerVertical -->
+
+        <TextView
+            android:id="@+id/head_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/white"
+            android:text="头像"
+            android:textSize="19sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:minHeight="100dp"
+            android:layout_toRightOf="@id/head_text"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_head"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/person_pic"/>
+            
+            <ImageView
+                android:id="@+id/iv_head_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:background="@drawable/forward_arrow"/>
+
+            <!-- 靠右且水平居中 -->
+
+
+          
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp" >
+    </View>
+
+    <RelativeLayout
+        android:id="@+id/rl_info_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/item"
+        android:orientation="horizontal"
+        android:padding="10dip" >
+
+        <!-- 垂直方向上居中：centerVertical -->
+		
+        <TextView
+            android:id="@+id/nick_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="昵称"
+            android:textColor="@android:color/white"
+            android:textSize="19sp" />
+		<!-- 显示昵称的文本框在箭头的左边，并与标识的文本框底端对齐 -->
+		<!-- 由于此时箭头仍未定义，所以用@+id,但写“呢称”的文本已在前面定义，就用@id -->
+        <TextView
+            android:id="@+id/tv_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/nick_lable"
+            android:layout_toLeftOf="@+id/iv_nick_arrow"
+            android:hint="显示处"
+            android:textColor="@android:color/white"
+            android:textSize="19sp" />
+        
+         <ImageView
+            android:id="@+id/iv_nick_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/forward_arrow" />
+
+    </RelativeLayout>
+
+	 <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp" >
+    </View>
+    <RelativeLayout
+        android:id="@+id/rl_info_account"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+          android:background="@drawable/item"
+        android:padding="10dip" >
+
+        <!-- 垂直方向上居中：centerVertical -->
+		<TextView
+		    android:id="@+id/account_lable"
+			android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="账户"
+            android:textColor="@android:color/white"
+            android:textSize="19sp" />
+         <TextView
+            android:id="@+id/tv_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/account_lable"
+            android:layout_toLeftOf="@+id/iv_account_arrow"
+            android:hint="显示处"
+            android:textColor="@android:color/white"
+            android:textSize="19sp" />
+        
+         <ImageView
+            android:id="@+id/iv_account_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/forward_arrow" />
+    </RelativeLayout>
+
+     <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp" >
+    </View>
+    <RelativeLayout
+        android:id="@+id/rl_info_sex"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@drawable/item"
+        android:padding="10dip" >
+
+        <!-- 垂直方向上居中：centerVertical -->
+
+        <TextView
+            android:id="@+id/sex_lable"
+			android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="性别"
+            android:textColor="@android:color/white"
+            android:textSize="19sp" />
+        <TextView
+            android:id="@+id/tv_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+       		android:layout_alignBottom="@id/sex_lable"
+            android:layout_toLeftOf="@+id/iv_sex_arrow"
+            android:text="男"
+            android:textColor="@android:color/white"
+            android:textSize="19sp" />
+        
+          <ImageView
+            android:id="@+id/iv_sex_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/forward_arrow" />
+    </RelativeLayout>
+	<Button 
+	    android:id="@+id/btn_chat"
+	    android:layout_marginTop="18dp"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="18dp" 
+	    android:layout_marginRight="18dp"
+	    android:background="@drawable/round_btn_blue"
+	    android:textColor="@android:color/white"
+	    android:text="发起会话"></Button>
+
+	
+
+</LinearLayout>
