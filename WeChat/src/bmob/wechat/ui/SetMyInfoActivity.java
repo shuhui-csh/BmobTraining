@@ -59,12 +59,33 @@ public class SetMyInfoActivity extends Activity implements OnClickListener{
 //			View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 //		}
 		setContentView(R.layout.activity_set_info);
-		//获取传进此Activity的标识
-		from = getIntent().getStringExtra("from");
-		//获取传入此Activity的昵称
-		nickName = getIntent().getStringExtra("nickName");
+		
+
 		initView();
 	}
+//	/**
+//	 * @param resultCode
+//	 * activity在finish的时候会回调此方法
+//	 * 根据请求码判断，Intent是来自于哪个Activity
+//	 * 1是来自于此Fragment相关的MainActivity的请求码，用于标识MainActivity
+//	 * 2是来自于UpdateNickActivity的请求码，用于标识UpdateNickActivity
+//	 */
+//	@Override
+//	protected void onActivityResult(int requestCode,int resultCode, Intent data) {
+//		// TODO Auto-generated method stub
+//		switch (requestCode) {
+//		case 1:
+//			
+//				
+//			
+//			break;
+//		case 2:
+//			
+//		default:
+//			break;
+//		}
+//	}
+	
 	private void initView() 
 	{
 		//初始化所有组件
@@ -81,10 +102,8 @@ public class SetMyInfoActivity extends Activity implements OnClickListener{
 		tv_nick = (TextView) findViewById(R.id.tv_nick);
 		tv_account = (TextView) findViewById(R.id.tv_account);
 		tv_sex = (TextView) findViewById(R.id.tv_sex);
-		tv_nick.setText(nickName);
-		//返回按钮,标题，头像栏,昵称栏,性别栏，设置监听
-		btn_back.setOnClickListener(this);
-//		backFrameLayout.setOnClickListener(this);
+		//获取传进此Activity的标识me或者是others
+		from = getIntent().getStringExtra("from");
 		//如果from携带的值是me,表示的是个人资料
 		if (from.equals("me")) {
 			//设置标题栏为个人资料
@@ -99,17 +118,24 @@ public class SetMyInfoActivity extends Activity implements OnClickListener{
 			rl_sexLayout.setOnClickListener(this);
 			//隐藏发起会话的按钮
 			btn_chat.setVisibility(View.INVISIBLE);
-			
 		}
 		else {
 			tv_title.setText("详细资料");
 			//。。。。这里靠队友了。。。。信息栏不需要设置监听，并隐藏信息栏最右边的箭头即可
 			
-		}
+		}	
+	
+		//获取修改后传入此Activity的昵称nickName
+		nickName = getIntent().getStringExtra("nickName");
+		tv_nick.setText(nickName);
+		
+		//返回按钮,标题，头像栏,昵称栏,性别栏，设置监听
+		btn_back.setOnClickListener(this);
+//		backFrameLayout.setOnClickListener(this);
+		
 		//判断从昵称设置的界面返回以后修改昵称
 		
 	
-		rl_headLayout.setOnClickListener(this);
 //		iv_head.setOnClickListener(this);
 //		iv_head_arrow.setOnClickListener(this);
 		
@@ -183,7 +209,6 @@ public class SetMyInfoActivity extends Activity implements OnClickListener{
 	  * @return void
 	  * @throws
 	  */
-	//实例化本地的User对象
 	LocalUser user1 = new LocalUser("jack", "291823", R.drawable.icon_contact_normal);
 //	BmobUserManager userManager;
 	private void updateSexInfo(int which)
